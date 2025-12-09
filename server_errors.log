@@ -1,0 +1,54 @@
+2025-12-09 23:01:19,779 WARNING:  * Debugger is active!
+2025-12-09 23:01:19,786 INFO:  * Debugger PIN: 118-813-712
+2025-12-09 23:01:49,685 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-12-09 23:01:49,685 INFO: [33mPress CTRL+C to quit[0m
+2025-12-09 23:01:49,685 INFO:  * Restarting with stat
+2025-12-09 23:01:49,856 WARNING:  * Debugger is active!
+2025-12-09 23:01:49,863 INFO:  * Debugger PIN: 118-813-712
+2025-12-09 23:02:28,825 ERROR: Update Status Error: (1265, "Data truncated for column 'status' at row 1")
+2025-12-09 23:02:28,826 INFO: 127.0.0.1 - - [09/Dec/2025 23:02:28] "[35m[1mPUT /complaints/1/status HTTP/1.1[0m" 500 -
+2025-12-09 23:02:35,994 INFO: 127.0.0.1 - - [09/Dec/2025 23:02:35] "PUT /complaints/1/status HTTP/1.1" 200 -
+2025-12-09 23:02:36,000 INFO: 127.0.0.1 - - [09/Dec/2025 23:02:36] "GET /complaints HTTP/1.1" 200 -
+2025-12-09 23:02:39,601 INFO: 127.0.0.1 - - [09/Dec/2025 23:02:39] "PUT /complaints/1/status HTTP/1.1" 200 -
+2025-12-09 23:02:39,608 INFO: 127.0.0.1 - - [09/Dec/2025 23:02:39] "GET /complaints HTTP/1.1" 200 -
+2025-12-09 23:02:43,274 ERROR: Update Status Error: (1265, "Data truncated for column 'status' at row 1")
+2025-12-09 23:02:43,275 INFO: 127.0.0.1 - - [09/Dec/2025 23:02:43] "[35m[1mPUT /complaints/1/status HTTP/1.1[0m" 500 -
+2025-12-09 23:02:52,028 INFO: 127.0.0.1 - - [09/Dec/2025 23:02:52] "POST /logout HTTP/1.1" 200 -
+2025-12-09 23:06:18,353 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-12-09 23:06:18,353 INFO: [33mPress CTRL+C to quit[0m
+2025-12-09 23:06:18,354 INFO:  * Restarting with stat
+2025-12-09 23:06:18,523 WARNING:  * Debugger is active!
+2025-12-09 23:06:18,530 INFO:  * Debugger PIN: 118-813-712
+2025-12-09 23:06:52,693 INFO: 127.0.0.1 - - [09/Dec/2025 23:06:52] "POST /login HTTP/1.1" 200 -
+2025-12-09 23:06:52,726 INFO: 127.0.0.1 - - [09/Dec/2025 23:06:52] "GET /complaints HTTP/1.1" 200 -
+2025-12-09 23:06:52,732 INFO: 127.0.0.1 - - [09/Dec/2025 23:06:52] "GET /complaints HTTP/1.1" 200 -
+2025-12-09 23:06:57,039 INFO: 127.0.0.1 - - [09/Dec/2025 23:06:57] "PUT /complaints/1/status HTTP/1.1" 200 -
+2025-12-09 23:06:57,045 INFO: 127.0.0.1 - - [09/Dec/2025 23:06:57] "GET /complaints HTTP/1.1" 200 -
+2025-12-09 23:07:00,066 INFO: 127.0.0.1 - - [09/Dec/2025 23:07:00] "POST /logout HTTP/1.1" 200 -
+2025-12-09 23:07:41,956 INFO: 127.0.0.1 - - [09/Dec/2025 23:07:41] "[35m[1mPOST /register HTTP/1.1[0m" 201 -
+2025-12-09 23:07:46,907 INFO: 127.0.0.1 - - [09/Dec/2025 23:07:46] "POST /login HTTP/1.1" 200 -
+2025-12-09 23:07:46,943 INFO: 127.0.0.1 - - [09/Dec/2025 23:07:46] "GET /complaints HTTP/1.1" 200 -
+2025-12-09 23:07:46,951 INFO: 127.0.0.1 - - [09/Dec/2025 23:07:46] "GET /complaints HTTP/1.1" 200 -
+2025-12-09 23:07:56,453 INFO: 127.0.0.1 - - [09/Dec/2025 23:07:56] "[35m[1mPOST /complaints HTTP/1.1[0m" 201 -
+2025-12-09 23:07:56,489 INFO: 127.0.0.1 - - [09/Dec/2025 23:07:56] "GET /complaints HTTP/1.1" 200 -
+2025-12-09 23:08:01,931 INFO: 127.0.0.1 - - [09/Dec/2025 23:08:01] "POST /logout HTTP/1.1" 200 -
+2025-12-09 23:08:19,709 INFO: 127.0.0.1 - - [09/Dec/2025 23:08:19] "POST /login HTTP/1.1" 200 -
+2025-12-09 23:08:19,747 INFO: 127.0.0.1 - - [09/Dec/2025 23:08:19] "GET /complaints HTTP/1.1" 200 -
+2025-12-09 23:08:19,754 INFO: 127.0.0.1 - - [09/Dec/2025 23:08:19] "GET /complaints HTTP/1.1" 200 -
+2025-12-09 23:10:01,471 INFO: 127.0.0.1 - - [09/Dec/2025 23:10:01] "PUT /complaints/1/status HTTP/1.1" 200 -
+2025-12-09 23:10:01,478 INFO: 127.0.0.1 - - [09/Dec/2025 23:10:01] "GET /complaints HTTP/1.1" 200 -
+2025-12-09 23:10:09,555 INFO: 127.0.0.1 - - [09/Dec/2025 23:10:09] "POST /logout HTTP/1.1" 200 -
+2025-12-09 23:13:05,536 INFO: 127.0.0.1 - - [09/Dec/2025 23:13:05] "POST /login HTTP/1.1" 200 -
+2025-12-09 23:13:05,625 INFO: 127.0.0.1 - - [09/Dec/2025 23:13:05] "GET /complaints HTTP/1.1" 200 -
+2025-12-09 23:13:05,668 INFO: 127.0.0.1 - - [09/Dec/2025 23:13:05] "GET /complaints HTTP/1.1" 200 -
+2025-12-09 23:13:12,536 INFO: 127.0.0.1 - - [09/Dec/2025 23:13:12] "POST /logout HTTP/1.1" 200 -
+2025-12-09 23:16:03,510 INFO: 127.0.0.1 - - [09/Dec/2025 23:16:03] "POST /login HTTP/1.1" 200 -
+2025-12-09 23:16:03,544 INFO: 127.0.0.1 - - [09/Dec/2025 23:16:03] "GET /complaints HTTP/1.1" 200 -
+2025-12-09 23:16:03,562 INFO: 127.0.0.1 - - [09/Dec/2025 23:16:03] "GET /complaints HTTP/1.1" 200 -
+2025-12-09 23:16:16,610 INFO: 127.0.0.1 - - [09/Dec/2025 23:16:16] "POST /logout HTTP/1.1" 200 -
+2025-12-09 23:18:39,565 INFO: 127.0.0.1 - - [09/Dec/2025 23:18:39] "POST /login HTTP/1.1" 200 -
+2025-12-09 23:18:39,599 INFO: 127.0.0.1 - - [09/Dec/2025 23:18:39] "GET /complaints HTTP/1.1" 200 -
+2025-12-09 23:18:39,608 INFO: 127.0.0.1 - - [09/Dec/2025 23:18:39] "GET /complaints HTTP/1.1" 200 -
+2025-12-09 23:18:51,442 INFO: 127.0.0.1 - - [09/Dec/2025 23:18:51] "POST /logout HTTP/1.1" 200 -
