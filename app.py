@@ -100,6 +100,57 @@ def logout():
     session.clear()
     return jsonify({"message": "Logged out"})
 
+# ✅ NEW: Session Check Endpoint (Requirement)
+@app.route('/check-session', methods=['GET'])
+def check_session():
+    if session.get('loggedin'):
+        return jsonify({
+            "loggedin": True, 
+            "user": {
+                "id": session['id'], 
+                "username": session['username'], 
+                "role": session['role']
+            }
+        })
+    return jsonify({"loggedin": False}), 401
+
+# ✅ NEW: Password Recovery Endpoint (Fixes 404 Error)
+@app.route('/reset-password', methods=['POST'])
+def reset_password():
+    try:
+        data = request.json
+        email = data.get('email')
+        new_password = data.get('new_password')
+        
+        if not email or not new_password:
+            return jsonify({"message": "Missing fields"}), 400
+            
+        hashed_pw = generate_password_hash(new_password)
+        
+        cursor = mysql.connection.cursor()
+        # Check if user exists
+        cursor.execute("SELECT id FROM users WHERE email = %s", (email,))
+        user = cursor.fetchone()
+        
+        if not user:
+            cursor.close()
+            return jsonify({"message": "User not found"}), 404
+            
+        # Update password
+        cursor.execute("UPDATE users SET password_hash = %s WHERE email = %s", (hashed_pw, email))
+        mysql.connection.commit()
+        
+        # Log the action (handle tuple vs dict cursor)
+        user_id = user[0] if isinstance(user, tuple) else user['id']
+        log_action(user_id, "Password Reset")
+        
+        cursor.close()
+        return jsonify({"message": "Password updated successfully"}), 200
+        
+    except Exception as e:
+        logging.error(f"Reset Password Error: {str(e)}")
+        return jsonify({"message": "Server Error"}), 500
+
 @app.route('/complaints', methods=['GET', 'POST'])
 def handle_complaints():
     try:
@@ -140,7 +191,7 @@ def delete_complaint(id):
         logging.error(f"Delete Error: {str(e)}")
         return jsonify({"error": "Failed to delete"}), 500
 
-# ✅ NEW: Update Status Endpoint (Admin Only)
+# ✅ Update Status Endpoint (Admin Only)
 @app.route('/complaints/<int:id>/status', methods=['PUT'])
 def update_complaint_status(id):
     if session.get('role') != 'Admin': return jsonify({"error": "Admins Only"}), 403
